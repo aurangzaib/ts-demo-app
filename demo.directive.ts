@@ -1,3 +1,5 @@
+/// <reference path="demo.all.ts" />
+
 // interfaces
 interface AppDirectiveAttributes extends ng.IAttributes {
    someInterestingThing: string;
@@ -14,4 +16,4 @@ function AppDirective($parse: ng.IParseService): ng.IDirective {
 }
 
 // linking to 
-app.directive("appDirective", AppDirective);
+angular.module("demoApp").directive("appDirective", AppDirective);

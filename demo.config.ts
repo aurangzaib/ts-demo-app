@@ -1,3 +1,5 @@
+/// <reference path="demo.all.ts" />
+
 // typescript namespace
 module appNamespace {
    // define config for demoApp

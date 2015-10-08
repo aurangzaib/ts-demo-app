@@ -1,3 +1,5 @@
+/// <reference path="demo.all.ts" />
+
 // typescript namespace
 module appNamespace {
 
@@ -5,14 +7,18 @@ module appNamespace {
    export class AppService {
 
       static $inject = ["$http"];
-      someProperty: Object;
-      someMethod: (anything: string) => Object;
 
-      constructor(private $http: ng.IHttpService) {
+      someProperty:Object;
+      someMethod:(anything:string) => Object;
+
+      //someMoreMethods:()=>void;
+
+      constructor(private $http:ng.IHttpService) {
+
          // a method which returns some object
-         someMethod: (anything: string) => new Object({
-            name: "Hello World"
-         });
+         this.someMethod = (anything:string) => new Object();
+
+         // this.someMoreMethods = () => {};
       }
    }
 }
