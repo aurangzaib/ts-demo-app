@@ -6,10 +6,10 @@ interface AppDirectiveAttributes extends ng.IAttributes {
 }
 
 // directive
-function AppDirective($parse: ng.IParseService): ng.IDirective {
+function AppDirective($parse:ng.IParseService):ng.IDirective {
    return {
       restrict: "A",
-      link: (scope: ng.IScope, element: ng.IAugmentedJQuery, attributes: AppDirectiveAttributes) => {
+      link: (scope:ng.IScope, element:ng.IAugmentedJQuery, attributes:AppDirectiveAttributes) => {
 
       }
    };
@@ -17,3 +17,10 @@ function AppDirective($parse: ng.IParseService): ng.IDirective {
 
 // linking to 
 angular.module("demoApp").directive("appDirective", AppDirective);
+
+angular.module("demoApp")
+   .directive("appDirective", ["$parse", function ($parse) {
+      return {
+
+      }
+   }]);

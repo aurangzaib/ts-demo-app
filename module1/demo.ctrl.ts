@@ -19,7 +19,7 @@ module appNamespace {
 
       $inject = ["$scope", "$http"];
 
-      constructor(private $scope:demoCtrlScope, // from angular.d.t
+      constructor(private $scope:ng.IScope, // from angular.d.t
                   private $http:ng.IHttpService,
                   private appService:appNamespace.AppService // service
       ) {
